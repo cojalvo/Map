@@ -1,0 +1,19 @@
+﻿// =======================================================
+// === This script creates a OSM Hiking Map for Israel ===
+// =======================================================
+
+// Allow the use of relative file names       
+use-script-dir
+// Change directory to Israel Hiking Directory
+change-directory ..
+change-directory ..
+
+// Load Israel map sources
+run-script "Scripts\Maperitive\IsraelMap.mscript"
+
+// Load the Israel Hiking Map rules
+use-ruleset location="Rules\IsraelHiking.mrules"
+apply-ruleset
+
+// Calculate the total length of hiking trails
+// run-python file="Scripts\Maperipy\TrailsLength.py"
